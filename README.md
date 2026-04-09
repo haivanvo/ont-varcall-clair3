@@ -1,7 +1,5 @@
 # GENERAL ONT VARIANT CALLING PIPELINE USING CLAIR3 (GPU)
-From fastq to vcf.
-
-This pipeline is run on Mac Silicon.
+From fastq to vcf. This pipeline is run on Mac Silicon.
 
 
 ## Architecture 
