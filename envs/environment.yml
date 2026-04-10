@@ -13,6 +13,9 @@ dependencies:
   - python=3.11
   - whatshap
   - zlib
+  - nanoplot
+  - chopper
+  - yq
   - pip:
     - Jinja2==3.1.6
     - MarkupSafe==3.0.3
@@ -25,4 +28,3 @@ dependencies:
     - torchaudio==2.2.2
     - torchvision==0.17.2
     - typing_extensions==4.15.0
-
