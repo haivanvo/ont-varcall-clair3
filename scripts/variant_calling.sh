@@ -1,3 +1,17 @@
+# step 1: install the envrionment using brew
+brew install gnu-getopt bash llvm micromamba pypy3 samtools
+
+# step 2: install PyTorch and other dependencies using mamba
+mamba create -n clair3 python=3.11 autoconf automake zlib libdeflate cffi parallel -y
+mamba activate clair3
+python -m pip install torch==2.2.* torchvision==0.17.* torchaudio==2.2.*
+
+# step 3: build the dependecies
+git clone https://github.com/HKU-BAL/Clair3.git && cd Clair3
+make PREFIX=${CONDA_PREFIX}
+
+# run Clair3
+
 #!/bin/bash
 set -euo pipefail
 
