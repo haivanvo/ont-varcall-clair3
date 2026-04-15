@@ -22,9 +22,7 @@ For additional guide, check the original Github: https://github.com/HKU-BAL/Clai
 
 NanoStat is written for Python3 and will not work in Python2.7 or older.
 ```
-conda install -c bioconda nanostat chopper minimap2
-
-# step 1: install the envrionment using brew
+# step 1: install the environment using brew
 brew install gnu-getopt bash llvm micromamba pypy3 samtools
 
 # step 2: install PyTorch and other dependencies using mamba
@@ -32,7 +30,7 @@ mamba create -n clair3 python=3.11 autoconf automake zlib libdeflate cffi parall
 mamba activate clair3
 python -m pip install torch==2.2.* torchvision==0.17.* torchaudio==2.2.*
 
-# step 3: build the dependecies
+# step 3: build the dependencies
 git clone https://github.com/HKU-BAL/Clair3.git && cd Clair3
 make PREFIX=${CONDA_PREFIX}
 ```
