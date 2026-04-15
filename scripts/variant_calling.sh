@@ -23,11 +23,4 @@ CMD="python3 /path/to/clair3/run_clair3.py \
   --platform=${PLATFORM} \
   --model_path=${CONDA_PREFIX}/bin/models/${MODEL} \
   --output=${OUTDIR} \
-  --qual=${QUAL}"
-
-# Add optional flags
-if [ "$USE_LONGPHASE" = "true" ]; then
-  CMD="$CMD --use_longphase_for_intermediate_phasing"
-fi
-
-eval $CMD
+  --qual=${QUAL}" # There are additional flags in Clair3 command, check their github for more 
