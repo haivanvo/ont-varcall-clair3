@@ -31,3 +31,6 @@ python3 /path/to/clair3/run_clair3.py \
   --model_path=${MODEL} \
   --output=${OUTDIR} \
   --qual=10 # optional 
+
+
+ 
