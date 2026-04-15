@@ -23,6 +23,11 @@ For additional guide, check the original Github: https://github.com/HKU-BAL/Clai
 
 ## Installation
 
+### 1. Preprocessing
+
+### 2. Alignment
+
+### 3. Variant calling
 ```
 
 # step 1: install the envrionment using brew
