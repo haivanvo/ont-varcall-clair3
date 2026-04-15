@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
