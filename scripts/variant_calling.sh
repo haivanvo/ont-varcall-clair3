@@ -20,5 +20,5 @@ python3 /path/to/clair3/run_clair3.py \
   --threads=${THREADS} \
   --platform=${PLATFORM} \
   --model_path=${CONDA_PREFIX}/bin/models/${MODEL} \
-  --use_longphase_for_intermediate_phasing \  # optional, recommended for ONT
-  --qual=${QUAL}  # optional, default=2
+  --use_longphase_for_intermediate_phasing \  
+  --qual=${QUAL}  
