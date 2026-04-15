@@ -13,10 +13,7 @@ For additional guide, check the original Github: https://github.com/HKU-BAL/Clai
 ├── scripts/             
 │   ├── preprocessing.sh
 │   ├── alignment.sh
-│   └── variant_calling.sh
-├── data/                
-│   └── README.md        
-├── results/             
+│   └── variant_calling.sh              
 └── README.md
 
 ```
