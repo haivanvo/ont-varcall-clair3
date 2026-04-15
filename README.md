@@ -23,12 +23,9 @@ For additional guide, check the original Github: https://github.com/HKU-BAL/Clai
 
 ## Installation
 
-### 1. Preprocessing
-
-### 2. Alignment
-
-### 3. Variant calling
+NanoStat is written for Python3 and will not work in Python2.7 or older.
 ```
+conda install -c bioconda nanostat chopper minimap2
 
 # step 1: install the envrionment using brew
 brew install gnu-getopt bash llvm micromamba pypy3 samtools
@@ -41,7 +38,6 @@ python -m pip install torch==2.2.* torchvision==0.17.* torchaudio==2.2.*
 # step 3: build the dependecies
 git clone https://github.com/HKU-BAL/Clair3.git && cd Clair3
 make PREFIX=${CONDA_PREFIX}
-
 ```
 
 
