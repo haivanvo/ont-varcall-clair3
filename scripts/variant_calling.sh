@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
 SAMPLE=/path/to/user
