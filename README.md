@@ -11,9 +11,9 @@ From fastq to vcf. This pipeline is run on Mac Silicon.
 ├── envs/               
 │   └── environment.yml  
 ├── scripts/             
-│   ├── 01_preprocessing.sh
-│   ├── 02_alignment.sh
-│   └── 03_variant_calling.sh
+│   ├── preprocessing.sh
+│   ├── alignment.sh
+│   └── variant_calling.sh
 ├── data/                
 │   └── README.md        
 ├── results/             
