@@ -13,7 +13,8 @@ For additional guide, check the original Github: https://github.com/HKU-BAL/Clai
 ├── scripts/             
 │   ├── preprocessing.sh
 │   ├── alignment.sh
-│   └── variant_calling.sh              
+│   ├── variant_calling.sh
+│   └── run_clair3_pipeline.sh              
 └── README.md
 
 ```
