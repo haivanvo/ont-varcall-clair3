@@ -1,36 +1,33 @@
-# step 1: install the envrionment using brew
-brew install gnu-getopt bash llvm micromamba pypy3 samtools
-
-# step 2: install PyTorch and other dependencies using mamba
-mamba create -n clair3 python=3.11 autoconf automake zlib libdeflate cffi parallel -y
-mamba activate clair3
-python -m pip install torch==2.2.* torchvision==0.17.* torchaudio==2.2.*
-
-# step 3: build the dependecies
-git clone https://github.com/HKU-BAL/Clair3.git && cd Clair3
-make PREFIX=${CONDA_PREFIX}
-
-# run Clair3
-
 #!/bin/bash
-set -euo pipefail
-
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
-SAMPLE=/path/to/user
-REF=/path/to/ref/fasta
-MODEL=/path/to/model
-OUTDIR=/path/to/output
+CONFIG=${1:-config.yaml}  # nhận config file làm argument, default config.yaml
 
-python3 /path/to/clair3/run_clair3.py \
-  --bam_fn=${SAMPLE}/HG001.bam \
-  --ref_fn=${REF}/GRCh38_no_alt_analysis_set.fasta \
-  --sample_name=HG001 \
-  --threads=4 \
-  --platform=ont \
-  --model_path=${MODEL} \
+# Parse config
+SAMPLE=$(yq '.sample_name' "$CONFIG")
+BAM=$(yq '.bam_fn' "$CONFIG")
+REF=$(yq '.ref_fn' "$CONFIG")
+OUTDIR=$(yq '.output_dir' "$CONFIG")
+THREADS=$(yq '.threads' "$CONFIG")
+PLATFORM=$(yq '.platform' "$CONFIG")
+MODEL=$(yq '.model_name' "$CONFIG")
+QUAL=$(yq '.qual' "$CONFIG")
+USE_LONGPHASE=$(yq '.use_longphase' "$CONFIG")
+
+# Build command
+CMD="python3 /path/to/clair3/run_clair3.py \
+  --bam_fn=${BAM} \
+  --ref_fn=${REF} \
+  --sample_name=${SAMPLE} \
+  --threads=${THREADS} \
+  --platform=${PLATFORM} \
+  --model_path=${CONDA_PREFIX}/bin/models/${MODEL} \
   --output=${OUTDIR} \
-  --qual=10 # optional 
+  --qual=${QUAL}"
 
+# Add optional flags
+if [ "$USE_LONGPHASE" = "true" ]; then
+  CMD="$CMD --use_longphase_for_intermediate_phasing"
+fi
 
- 
+eval $CMD
