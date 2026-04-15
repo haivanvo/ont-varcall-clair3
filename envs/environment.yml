@@ -8,23 +8,14 @@ dependencies:
   - automake
   - cffi
   - libdeflate
-  - numpy=1.26.4
   - parallel
   - python=3.11
-  - whatshap
   - zlib
+  - whatshap
   - nanoplot
   - chopper
   - yq
   - pip:
-    - Jinja2==3.1.6
-    - MarkupSafe==3.0.3
-    - filelock==3.20.3
-    - fsspec==2026.2.0
-    - mpmath==1.3.0
-    - pillow==12.1.0
-    - sympy==1.14.0
-    - torch==2.2.2
-    - torchaudio==2.2.2
-    - torchvision==0.17.2
-    - typing_extensions==4.15.0
+    - torch==2.2.*
+    - torchvision==0.17.*
+    - torchaudio==2.2.*
