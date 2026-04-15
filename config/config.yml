@@ -1,6 +1,5 @@
 # setup
 sample_name: HG001
-bam_fn: /path/to/sample.bam
 ref_fn: /path/to/ref.fasta
 output_dir: /path/to/output
 
@@ -9,4 +8,3 @@ threads: 4
 platform: ont        # options: ont, hifi, ilmn
 model_name: ont      # model under ${CONDA_PREFIX}/bin/models/
 qual: 10             # optional, default=2
-
