@@ -10,5 +10,3 @@ platform: ont        # options: ont, hifi, ilmn
 model_name: ont      # model under ${CONDA_PREFIX}/bin/models/
 qual: 10             # optional, default=2
 
-# Options
-use_longphase: true  # recommended for ONT
