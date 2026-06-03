@@ -1,6 +1,6 @@
 # GENERAL ONT VARIANT CALLING PIPELINE USING CLAIR3 (GPU)
-From fastq to vcf. This pipeline is run on Mac Silicon.
-For additional guide, check the original Github: https://github.com/HKU-BAL/Clair3/blob/main/docs/gpu_quick_start.md
+From fastq to vcf. This pipeline is run on Unix environment.
+For additional guide, check the original GitHub: https://github.com/HKU-BAL/Clair3/blob/main/docs/gpu_quick_start.md
 
 ## Architecture 
 
